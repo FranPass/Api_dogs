@@ -17,11 +17,12 @@
 //     =====`-.____`.___ \_____/___.-`___.-'=====
 //                       `=---='
 //     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+const port = process.env.PORT || 3000;
 const server = require('./src/app.js');
 const { conn } = require('./src/db.js');
 
 conn.sync({ force: false }).then(() => {
-  server.listen(PORT, () => {
+  server.listen(port, "0.0.0.0", () => {
     console.log('%s listening at 3001'); 
   });
 });
