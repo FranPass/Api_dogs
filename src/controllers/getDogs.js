@@ -43,9 +43,9 @@ const getDogs = async (req, res) => {
                 id: '',
                 image: 'https://www.pawmaw.com/pawmaw/img/home/promo-shape-3.png',
                 name: 'Dog not found',
-                weight: '---',
-                height: '---',
-                life_span: '---',
+                weight: '',
+                height: '',
+                life_span: '',
                 temperament: [],
             }])
             return res.json(dogsByName)
